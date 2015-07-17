@@ -1,0 +1,11 @@
+How To:
+
+1. Colocar a dll rxtx.dll na pasta system32.
+2. Criar uma pasta em c: com o nome javaserial e colocar a dll nesta pasta.
+3. Colocar C:/javaserial no path do sistema. Reiniciar o sistema.
+4. Atualizar o arquivo .bat da pasta code.
+5. Atualizar a classe java com o nome correto da porta a ser acessada.
+6. Executar o .bat
+7. Torcer pra dá certo.
+
+xD

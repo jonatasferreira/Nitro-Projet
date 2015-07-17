@@ -1,0 +1,8 @@
+Xbee - Device
+CH - C
+ID - 1010
+DH - 0
+DL - 1234
+MY - 1235
+SH - 13A200
+SL - 4063ED4

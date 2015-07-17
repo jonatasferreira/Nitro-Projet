@@ -1,0 +1,99 @@
+ **  DIGITAL  (PWM ~)
+
+0 RX - 
+1 TX - 
+2    - wheelPin
+3  ~ - ESCPin
+4    - trigUp
+5  ~ - echoUp
+6  ~ - camHorPin     
+7    - camVerPin     
+8    - sonarUpPin
+9  ~ - sonarFrontPin
+10 ~ - echoFront
+11 ~ - trigFront
+12   - ligthFront
+13   - ligthBack 
+
+
+ **  ANALOGICAL
+
+A0 - luminosity
+A1 - odometerPin   
+A2 - 
+A3 - 
+A4 - 
+A5 - 
+
+---------------------------------------------------------------------
+
+#include <Servo.h>
+
+    //Servos
+Servo servoWheel;      // Port 2  #  WARNING : Limit 5 a 150 
+Servo myESC;           // Port 3
+Servo servoCamHor;     // Port 6
+Servo servoCamVer;     // Port 7
+Servo servoSonarUp;    // Port 8
+Servo servoSonarFront; // Port 9
+
+    //Wheel
+const int limWheelRigth = 5;
+const int limWheelLeft  = 150;
+const int middleWheel   = 77;
+
+    //ESC
+const int ESCBack       = 76;  //  Run back
+const int ESCNeutral    = 90;  //  Neutral position
+const int ESCBeginFront = 105; //  Run inital front
+
+    //Digital ports
+const int wheelPin      = 2;
+const int ESCPin        = 3;
+const int trigUp        = 4;
+const int echoUp        = 5;
+const int camHorPin     = 6;
+const int camVerPin     = 7;
+const int sonarUpPin    = 8;
+const int sonarFrontPin = 9;
+const int echoFront     = 10;
+const int trigFront     = 11;
+const int ligthFront    = 12;
+const int ligthBack     = 13;
+
+    //Analog ports
+const int luminosity    = A0;
+const int odometerPin   = A1;
+
+
+void setup(){
+  Serial.begin(9600);
+  servoWheel.attach(wheelPin);
+  servoSonarUp.attach(sonarUpPin);
+  servoSonarFront.attach(sonarFrontPin);  
+  servoCamHor.attach(camHorPin);
+  servoCamVer.attach(camVerPin);
+  
+  myESC.attach(ESCPin);
+  myESC.write(ESCNeutral);
+  armESC();
+  
+  // servos
+  pinMode(sonarFrontPin,OUTPUT);
+  pinMode(sonarUpPin,OUTPUT);
+  pinMode(wheelPin,OUTPUT);
+  // ESC
+  pinMode(ESCPin,OUTPUT);
+  // sonar
+  pinMode(echoFront,INPUT);
+  pinMode(trigFront,OUTPUT);  
+  pinMode(echoUp,INPUT);
+  pinMode(trigUp,OUTPUT);  
+  pinMode(camHorPin,INPUT);
+  pinMode(camVerPin,OUTPUT);  
+  // ligth
+  pinMode(ligthFront,OUTPUT);
+  pinMode(ligthBack,OUTPUT);
+  // sensor
+  pinMode(odometerPin,INPUT);
+}

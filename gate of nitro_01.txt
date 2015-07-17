@@ -1,0 +1,99 @@
+ **  DIGITAL  (PWM ~)
+
+0 RX - 
+1 TX - 
+2    - wheelPin
+3  ~ - ESCPin
+4    - trigUp
+5  ~ - echoUp
+6  ~ - trigBack
+7    - echoBack
+8    - sonarUpPin
+9  ~ - sonarFrontPin
+10 ~ - echoFront
+11 ~ - trigFront
+12   - ligthFront
+13   - ligthBack 
+
+
+ **  ANALOGICAL
+
+A0 - luminosity
+A1 - 
+A2 - 
+A3 - 
+A4 - 
+A5 - 
+
+---------------------------------------------------------------------
+
+#include <Servo.h>
+
+    //global variables
+Servo servoWheel;      // Port 2  #  WARNING : Limit 5 a 150 
+Servo servoSonarUp;    // Port 8
+Servo servoSonarFront; // Port 9
+Servo myESC;           // Port 3
+
+long initialDistance;
+
+    //Wheel
+const int limWheelRigth = 5;
+const int limWheelLeft  = 150;
+const int middleWheel   = 77;
+    //ESC
+const int ESCbegin      = 20; 
+const int ESCend        = 40;
+
+
+    //Digital ports
+const int wheelPin      = 2;
+const int ESCPin        = 3;
+const int trigUp        = 4;
+const int echoUp        = 5;
+const int trigBack      = 6;
+const int echoBack      = 7;
+const int sonarUpPin    = 8;
+const int sonarFrontPin = 9;
+const int echoFront     = 10;
+const int trigFront     = 11;
+const int ligthFront    = 12;
+const int ligthBack     = 13;
+
+    //Analog ports
+const int luminosity    = 0;
+
+
+void setup(){
+  Serial.begin(9600);
+  servoSonarUp.attach(sonarUpPin);
+  servoSonarFront.attach(sonarFrontPin);  
+  servoWheel.attach(wheelPin);
+  
+  myESC.attach(ESCPin);
+  myESC.write(ESCbegin);
+  armESC();
+  
+  // servos
+  pinMode(sonarFrontPin,OUTPUT);
+  pinMode(sonarUpPin,OUTPUT);
+  pinMode(wheelPin,OUTPUT);
+  // ESC
+  pinMode(ESCPin,OUTPUT);
+  // sonar
+  pinMode(echoFront,INPUT);
+  pinMode(trigFront,OUTPUT);  
+  pinMode(echoUp,INPUT);
+  pinMode(trigUp,OUTPUT);  
+  pinMode(echoBack,INPUT);
+  pinMode(trigBack,OUTPUT);  
+  // ligth
+  pinMode(ligthFront,OUTPUT);
+  pinMode(ligthBack,OUTPUT);
+  
+  servoWheel.write(middleWheel);
+  servoSonarUp.write(90);
+  servoSonarFront.write(90);
+  delay(400);
+  
+}
