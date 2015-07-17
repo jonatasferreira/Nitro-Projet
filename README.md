@@ -1,14 +1,14 @@
-![alt tag]()
+![alt tag](https://github.com/jonatassantos/Nitro-Projet/blob/master/img/nitro.JPG)
 
 ======= Projeto Nitro =======
 
-Projeto executado por 3 amigos no período da graduação. 
+Projeto executado por 3 amigos no perÃ­odo da graduaÃ§Ã£o. 
 Paramos por um logo tempo devido ao final do curso e depois inicio do mestrado. Bons tempos.
 
-A pasta 'programming_car' contêm o código do Arduíno uno que fica destro do carro.
-A pasta 'Joystick' contêm o código do joystick.
+A pasta 'programming_car' contÃªm o cÃ³digo do ArduÃ­no uno que fica destro do carro.
+A pasta 'Joystick' contÃªm o cÃ³digo do joystick.
 
-Existe uma XBEE no carro e no Joystick, assim podemos controlar o carro + câmera manualmente.
-E podemos ligar a função circuito, para o carro andar de forma autônoma, veja o vídeo na pasta vídeos.
+Existe uma XBEE no carro e no Joystick, assim podemos controlar o carro + cÃ¢mera manualmente.
+E podemos ligar a funÃ§Ã£o circuito, para o carro andar de forma autÃ´noma, veja o vÃ­deo na pasta vÃ­deos.
 
-Equipe (em ordem alfabética): [Jônatas Ferreira](https://br.linkedin.com/in/ferreirajonatas), [Laysson](https://br.linkedin.com/pub/laysson-ol/77/871/986/pt), [Pedro Almir](https://br.linkedin.com/pub/pedro-oliveira/38/311/157) e [Ramon](https://br.linkedin.com/pub/ramon-nepomuceno/54/42/176).
+Equipe (em ordem alfabÃ©tica): [JÃ´natas Ferreira](https://br.linkedin.com/in/ferreirajonatas), [Laysson](https://br.linkedin.com/pub/laysson-ol/77/871/986/pt), [Pedro Almir](https://br.linkedin.com/pub/pedro-oliveira/38/311/157) e [Ramon](https://br.linkedin.com/pub/ramon-nepomuceno/54/42/176).
