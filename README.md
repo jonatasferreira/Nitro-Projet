@@ -2,7 +2,7 @@
 
 ======= Projeto Nitro =======
 
-Projeto executado por 3 amigos no período da graduação. 
+Projeto executado por 4 amigos no período da graduação. 
 Paramos por um logo tempo devido ao final do curso e depois inicio do mestrado. Bons tempos.
 
 A pasta 'programming_car' contêm o código do Arduíno uno que fica destro do carro.
